@@ -21,8 +21,15 @@ public class TruthTableRunner {
         t.buildCombinations();
 
         for (List<Word> li:t.combinations){
-            System.out.printf("%s: %s\n",li,expr.apply(li));
+            System.out.printf("%s: %s\n",li,eval(li));
         }
+    }
+
+    public static Word eval(List<Word> l){
+        Word p = l.get(0);
+        Word q = l.get(1);
+        Word r = l.get(2);
+        return equ(imp(p,not(q)),imp(r,or(p,not(q))));
     }
 
     public static Word v(List<Word> l,String s){
