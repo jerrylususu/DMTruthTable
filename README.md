@@ -2,6 +2,7 @@
 An Expression Evaluator, created for Discrete Math Homework.
 
 `TruthTable.java`: Functional Style.
+
 `TruthTableRunner.java`: Traditional OOP Style.
 
 ## TODO
