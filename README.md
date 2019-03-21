@@ -7,7 +7,7 @@ An Expression Evaluator, created for Discrete Math Homework.
 
 ## Usage
 1. Put `TruthTable.java`, `TruthTableOOP.java` in the same path.
-2. Open `TruthTable.OOP`
+2. Open `TruthTableOOP.java`
 3. First add variables, see main() method
 4. Then change logical expressions, see eval2() method
 5. Run and enjoy!
