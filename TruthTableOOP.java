@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.function.Function;
 
-public class TruthTableRunner {
+public class TruthTableOOP {
 
     public static void main(String[] args) {
         TruthTable t = new TruthTable();
@@ -21,7 +21,7 @@ public class TruthTableRunner {
         t.buildCombinations();
 
         for (List<Word> li:t.combinations){
-            System.out.printf("%s: %s\n",li,eval(li));
+            System.out.printf("%s: %s\n",li,eval2(li));
         }
     }
 
@@ -30,6 +30,14 @@ public class TruthTableRunner {
         Word q = l.get(1);
         Word r = l.get(2);
         return equ(imp(p,not(q)),imp(r,or(p,not(q))));
+    }
+
+    // a even better version... much more similar to human style
+    public static Word eval2(List<Word> l){
+        Word p = l.get(0);
+        Word q = l.get(1);
+        Word r = l.get(2);
+        return p.imp(not(q)).equ(r.imp(p.or(not(q))));
     }
 
     public static Word v(List<Word> l,String s){
